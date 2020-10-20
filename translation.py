@@ -1,83 +1,84 @@
 class Translation(object):
-    START_TEXT = """Hello,
-This is a Telegram URL Upload Bot!
+    START_TEXT = """嗨,
+这是一个电报HTTP直连上传机器人！
 
-<b>Please send me any direct download URL Link, i can upload to telegram as File/Video</b>
+<b>请发送一个下载直连给我，我会帮您下载并以文件或视频格式上传到电报</b>
 
-/help for more details..
+/help 更多详细内容..
 
-Support Group : @InFoTelGroup
-© @SpEcHlDe , @TGBotsZ & @CWProjects"""
-    RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
-    ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = "<b>👉 Create own Clone Bot.. </b>  /help for Details"
-    FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
-    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
+加入里番频道 : @banbilibili
+加入讨论群组 : @animeforh
+© @lfurluploadbot"""
+    RENAME_403_ERR = "对不起，你没有权限去重命名文件"
+    ABS_TEXT = " 欢迎使用本机器人"
+    UPGRADE_TEXT = "<b>👉 加入里番频道 @banbilibili </b>  /help 获取更多内容"
+    FORMAT_SELECTION = "选择你想要的格式: <a href='{}'>文件大小为估计值</a> \n如果你想要设置自定义缩略图, 请先发送图片或者在按下下方按钮后快速发送图片.\n你可以使用 /deletethumbnail 来删除系统自动生成的文件"
+    SET_CUSTOM_USERNAME_PASSWORD = """如果你想下载会员视频请按以下格式:
 URL | filename | username | password"""
-    NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "trying to download"
-    UPLOAD_START = "trying to upload"
-    RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. Join : @TGBotsZ"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nJoin : @TGBotsZ \nUploaded in {} seconds."
-    NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
-    NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
-    SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
-    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
-    SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
+    NOYES_URL = "@robot URL detected. "
+    DOWNLOAD_START = "正在下载中"
+    UPLOAD_START = "正在上传中"
+    RCHD_BOT_API_LIMIT = "文件大小超过最大限制 (50MB). 无需担心，正在上传."
+    RCHD_TG_API_LIMIT = "下载耗时 {} 秒.\n当前文件大小: {}\n对不起，由于TG官方API限制，我无法上传超过1.5GB以上大小的文件"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "如果觉得我有用的话请加入频道进行讨论 : @animeforh"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n加入 : @banbilibili \nUploaded in {} seconds."
+    NOT_AUTH_USER_TEXT = "请 /upgrade 您的订阅."
+    NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. 免费用户上传限制: {}\n请 /upgrade 您的订阅.\n如果您认为这是一个BUG请联系 <a href='https://telegram.dog/suka25'>@suka25</a>"
+    SAVED_CUSTOM_THUMB_NAIL = "自定义 视频 / 文件 缩略图已保存. 该图将会用于这个 视频 / 文件."
+    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ 自定义图片清楚成功."
+    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ 媒体文件清楚成功"
+    SAVED_RECVD_DOC_FILE = "文档下载成功"
     CUSTOM_CAPTION_UL_FILE = " "
-    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
-    NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
-    USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
-    CURENT_PLAN_DETAILS = """Current plan details
+    NO_CUSTOM_THUMB_NAIL_FOUND = "未发现自定义缩略图"
+    NO_VOID_FORMAT_FOUND = "错误...\n<b>YouTubeDL</b> 报告: {}"
+    USER_ADDED_TO_DB = "用户 <a href='tg://user?id={}'>{}</a> 添加至 {} 到 {}."
+    CURENT_PLAN_DETAILS = """当前套餐详情
 --------
 Telegram ID: <code>{}</code>
-Plan name: Free Cloned User
+Plan name: 免费用户
 Expires on: 31/12/2020"""
-    HELP_USER = """Hai am URL Uploader bot..
+    HELP_USER = """嗨，我是文件上传机器人..
     
-1. Send url (Link|New Name with Extension).
-2. Send Custom Thumbnail (Optional).
-3. Select the button.
-   SVideo - Give File as video with Screenshots
-   DFile  - Give File with Screenshots
-   Video  - Give File as video without Screenshots
-   DFile  - Give File without Screenshots
+1. 发送下载直连 (URL|名称及后缀).
+2. 发送自定义缩略图 (可选).
+3. 选择按钮.
+   SVideo - 以视频文件发送，带截图
+   DFile  - 以文件形式发送，带截图
+   Video  - 以视频形式发送，不带截图
+   DFile  - 以文件形式发送，不带截图
    
-<b>👉 Create own Clone Bot :</b> 👉 <a href="https://youtu.be/QkAkSLBgoYw">Diploy</a>
+<b>👉 加入我们的频道 :</b> 👉 <a href="https://t.me/banbilibili"> @banbilibili</a>
 
 --------
-Send /me to know current plan details
+发送 /me 获取当前套餐
 
-Support Group : @InFoTelGroup
-© @TGBotsZ"""
-    REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
-    REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
-    REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
-    REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /rename with custom thumbnail support"
-    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @AnyDLBot"
-    FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS [HH:MM:SS]"""
-    FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded."
-    FF_MPEG_RO_BOT_STOR_AGE_INFO = "Video Duration: {}\nSend /clearffmpegmedia to delete this media, from my storage.\nSend /trim HH:MM:SS [HH:MM:SS] to cu[l]t a small photo / video, from the above media."
-    FF_MPEG_RO_BOT_STOR_AGE_ALREADY_EXISTS = "A saved media already exists. Please send /storageinfo to know the current media details."
-    USER_DELETED_FROM_DB = "User <a href='tg://user?id={}'>{}</a> deleted from DataBase."
-    REPLY_TO_DOC_OR_LINK_FOR_RARX_SRT = "Reply to a Telegram media (MKV), to extract embedded streams"
-    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "Reply /generatecustomthumbnail to a media album, to generate custom thumbail"
-    ERR_ONLY_TWO_MEDIA_IN_ALBUM = "Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
-    INVALID_UPLOAD_BOT_URL_FORMAT = "URL format is incorrect. make sure your url starts with either http:// or https://. You can set custom file name using the format link | file_name.extension"
-    ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
+加入老司机频道 : @banbilibili
+© @animeforh"""
+    REPLY_TO_DOC_GET_LINK = "回复一个TG视频或文件获取高速下载链接"
+    REPLY_TO_DOC_FOR_C2V = "回复一个视频文件进行转码"
+    REPLY_TO_DOC_FOR_SCSS = "回复一个TG视频文件获取截图"
+    REPLY_TO_DOC_FOR_RENAME_FILE = "回复一个视频文件 /rename 进行重命名（支持自定义缩略图）"
+    AFTER_GET_DL_LINK = "直链 <a href='{}'>已生成</a> 有效期 {} 天.\n© @lfurluploadbot"
+    FF_MPEG_RO_BOT_RE_SURRECT_ED = """格式: /trim HH:MM:SS [HH:MM:SS]"""
+    FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "首次发送 /downloadmedia 至任何媒体文件，则它将会自动下载到本地. \n发送 /storageinfo 了解文件当前存储信息."
+    FF_MPEG_RO_BOT_STOR_AGE_INFO = "视频时长: {}\n发送 /clearffmpegmedia 删除本地视频.\n发送 /trim HH:MM:SS [HH:MM:SS] 去截取一张图片 / 小段视频, 从上方视频."
+    FF_MPEG_RO_BOT_STOR_AGE_ALREADY_EXISTS = "文件已存在. 请发送 /storageinfo 了解文件当前存储位置"
+    USER_DELETED_FROM_DB = "用户 <a href='tg://user?id={}'>{}</a> 已从数据库中删除."
+    REPLY_TO_DOC_OR_LINK_FOR_RARX_SRT = "回复一个媒体文件 (MKV), 提取嵌入流"
+    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "回复 /generatecustomthumbnail 至一个媒体相册, 生成自定义缩略图"
+    ERR_ONLY_TWO_MEDIA_IN_ALBUM = "媒体相册只包含两张图片.请重新上传媒体相册再进行尝试, 或者只上传两张图片至一个媒体相册"
+    INVALID_UPLOAD_BOT_URL_FORMAT = "链接格式不正确. 请确保链接为 http:// 或 https://. 您可以设置自定义文件名，格式： URL | 文件名.后缀"
+    ABUSIVE_USERS = "你没有使用权限，如果你认为有错误, 请检查 /me 移除限制."
     FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/FFMpegRoBot"
-    EXTRACT_ZIP_INTRO_ONE = "Send a compressed file first, Then reply /unzip command to the file."
-    EXTRACT_ZIP_INTRO_THREE = "Analyzing received file. ⚠️ This might take some time. Please be patient. "
+    EXTRACT_ZIP_INTRO_ONE = "先发送一个压缩文件, 然后回复 /unzip 解压该文件."
+    EXTRACT_ZIP_INTRO_THREE = "分析已接收文件. ⚠️ 这会花费一些时间. 请耐心等候. "
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")
-    EXTRACT_ZIP_ERRS_OCCURED = "Sorry. Errors occurred while processing compressed file. Please check everything again twice, and if the issue persists, report this to <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
-    EXTRACT_ZIP_STEP_TWO = """Select file_name to upload from the below options.
-You can use /rename command after receiving file to rename it with custom thumbnail support."""
-    CANCEL_STR = "Process Cancelled"
-    ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
-    FREE_USER_LIMIT_Q_SZE = """Cannot Process.
-Free users only 1 request per 30 minutes.
-/upgrade or Try 1800 seconds later."""
-    SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
+    EXTRACT_ZIP_ERRS_OCCURED = "对不起，解压文件时出现错误. 请检查步骤是否正确, 如果这是个问题, 请提交给 <a href='https://telegram.dog/suka25'>@suka25</a>"
+    EXTRACT_ZIP_STEP_TWO = """选择文件名及使用一下设置上传.
+你可以使用 /rename 命令在接受文件时更改文件名及缩略图"""
+    CANCEL_STR = "进程取消"
+    ZIP_UPLOADED_STR = "上传 {} 个文件 在 {} 秒内"
+    FREE_USER_LIMIT_Q_SZE = """无法运行.
+免费用户限制为每30分钟一个请求
+/upgrade 或等待30分钟"""
+    SLOW_URL_DECED = "这似乎是一个非常慢的链接. 不妨试试使用代理."
